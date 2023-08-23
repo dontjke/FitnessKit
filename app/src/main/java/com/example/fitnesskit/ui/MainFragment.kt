@@ -1,4 +1,4 @@
-package com.example.fitnesskit
+package com.example.fitnesskit.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.fitnesskit.App
+import com.example.fitnesskit.adapter.TrainingAdapter
 import com.example.fitnesskit.api.ApiResult
-import com.example.fitnesskit.data.*
+import com.example.fitnesskit.data.Lesson
+import com.example.fitnesskit.data.LessonEntity
+import com.example.fitnesskit.data.Training
+import com.example.fitnesskit.data.TrainingType
 import com.example.fitnesskit.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -19,7 +24,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentMainBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -53,7 +58,7 @@ class MainFragment : Fragment() {
         }
 
         val newList = ArrayList<LessonEntity>()
-        map.forEach() { entry ->
+        map.forEach { entry ->
             newList.add(LessonEntity(type = TrainingType.HEADER, null, entry.key))
             entry.value.mapTo(newList) {
                 LessonEntity(type = TrainingType.TRAIN, it, null)

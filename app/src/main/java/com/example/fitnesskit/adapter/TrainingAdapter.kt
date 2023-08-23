@@ -1,4 +1,4 @@
-package com.example.fitnesskit
+package com.example.fitnesskit.adapter
 
 import android.annotation.SuppressLint
 import android.graphics.Color
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fitnesskit.R
 import com.example.fitnesskit.data.LessonEntity
 import com.example.fitnesskit.data.TrainingType
 

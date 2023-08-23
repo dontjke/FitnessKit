@@ -1,9 +1,10 @@
-package com.example.fitnesskit
+package com.example.fitnesskit.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.fitnesskit.R
 import com.example.fitnesskit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

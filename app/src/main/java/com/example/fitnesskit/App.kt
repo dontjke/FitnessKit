@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
 import com.example.fitnesskit.api.ApiService
 import com.example.fitnesskit.api.RetrofitClient
+import com.example.fitnesskit.ui.MainViewModelFactory
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
